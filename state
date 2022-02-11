@@ -1,0 +1,52 @@
+console.log(Textform) 
+
+import React, { useState } from 'react'
+
+export default function Textform() {
+    const handleUpClick = () => {
+        console.log("you clicked me")
+        let newtext = text.toUpperCase();
+        setText(newtext)
+    }
+
+    const handleOnChange = (event) => {
+        setText(event.target.value)
+
+    }
+
+    const [text, setText] = useState('enter text here 2')
+
+
+    return (
+        <div>
+
+            <h1>heading</h1>
+            <div className="mb-3">
+                <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+            </div>
+            <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
+
+        </div>
+    )
+}
+/////////////////////////////////////////////////////code of app.js//////////////////////////////////////////////////////////
+
+import  './App.css';
+import Navbar from './Components/Navbar';
+
+import Textform from './Components/Textform';
+
+
+function App() {
+  return (
+    <>
+      < Navbar title="textutils" about="about" />
+
+      <Textform/>
+        
+
+    </>
+  );
+}
+
+export default App;
