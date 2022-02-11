@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h1>inheritance</h1>   
+</body>
+<script src="inheritance.js"></script>
+
+</html>
+
+///////////////////////////////////////////////////////////////////javascript file///////////////////////////
+
+console.log("inheritance");
+
+class employee {
+    constructor(givenname, givenexperience, givendivision){
+        this.name = givenname;
+    
+        this.experience =givenexperience;
+    
+        this.division = givendivision;
+
+    }
+
+}
+
+class programer extends employee{
+constructor(givenname, givenexperience, givendivision,language,github){
+super(givenname, givenexperience, givendivision);
+this.language = language;
+this.github = github;
+}
+
+}
+
+ let employe = new programer("mirza",0,"javascript","javascript","muneeb136");
+ console.log(employe); 
+
+
