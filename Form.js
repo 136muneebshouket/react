@@ -7,11 +7,14 @@ export default function Form() {
     const [name, setName] = useState("");
     const [Value, setValue] = useState([]);
     const [Update,setUpdate]= useState(true);
-    const [selecteditem, setselecteditem]= useState(null);
+    const [selectedid, setselectedid]= useState(null);
 
 
     const func = (event) => {
         event.preventDefault();
+         if (!name) {
+            alert("please enter some value");
+        }
 
        const alldata = {id: new Date().getTime().toString() , data : name}
         setValue( [...Value, alldata])
@@ -47,7 +50,7 @@ export default function Form() {
       
         
     setName(selectedvalue.data);
-    setselecteditem(id);
+    setselectedid(id);
        
     }
 
@@ -55,7 +58,7 @@ export default function Form() {
         event.preventDefault();
         console.log('update');
         setValue(Value.map((elem) =>{
-             if(elem.id=== selecteditem){
+             if(elem.id=== selectedid){
                 return {...elem, data :name}
 
              }
