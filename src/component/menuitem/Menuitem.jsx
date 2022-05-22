@@ -41,7 +41,7 @@ export default function Menuitem({ title, imageUrl, size, history, linkUrl, matc
     />
     <div onClick={Navigate} className='content'>
       <h1 className='title'>{title.toUpperCase()}</h1>
-      <a href={link} className='subtitle'>SHOP NOW</a>
+       <span  className='subtitle'>SHOP NOW</span>
     </div>
   </div>
  </>
