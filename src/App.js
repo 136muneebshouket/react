@@ -1,39 +1,25 @@
-// App.js
-
-import React from 'react'
-// import fire from './component/auth/Auth';
-import Header from "./component/header/Header";
-// import Signup from "./component/signup/Signup";
-import Fetch from "./component/fetch/Fetch";
-import Delete from "./component/delete/Delete";
-// import Auth from "./component/auth/Auth";
+import './App.css';
+import Header from './component/header/Header';
+import Homepage from './component/pages/homepage/Homepage';
+import Shoppage from './component/pages/shoppage/Shoppage';
+import Signup from './component/signup/Signup'
 import { BrowserRouter,Routes, Route } from "react-router-dom";
-import Registe from "./component/REGISTER/Registe";
 function App() {
-
-  
   return (<>
-   
-   
-   <BrowserRouter>
+     <BrowserRouter>
     <Header/>
     <Routes>
-      <Route element={<Registe/>} path="/"></Route>
-    </Routes>
-   <Routes>
-      <Route element={<Delete/>} path="/delete"></Route>
+      <Route element={<Homepage/>} path="/"></Route>
     </Routes>
     <Routes>
-      <Route element={<Fetch/>} path="/fetch"></Route>
-    </Routes> 
-     {/* <Routes>
-      <Route element={<Auth/>} path="/login"></Route>
-    </Routes> */}
+      <Route element={<Shoppage/>} path="/shop"></Route>
+    </Routes>
+    <Routes>
+      <Route element={<Signup/>} path="/signup"></Route>
+    </Routes>
     </BrowserRouter>   
-       
-    </>
-  )
- }
+        </>
+  );
+}
 
-export default App
-
+export default App;
